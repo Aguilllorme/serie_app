@@ -1,6 +1,6 @@
 # Título del Proyecto
 
-_SearchSerieApp
+_SearchSerieApp_
 
 ## Qué es?
 
@@ -18,10 +18,10 @@ _Ejecutar el SerieApp.exe sigues los pasos y ya podrás usar la aplicación._
 
 ## Construido con 
 
-* [intellij idea]( https://www.jetbrains.com/idea/?fromMenu) - El framework de java.
+* [intellij idea]( https://www.jetbrains.com/idea/?fromMenu) - El IDE de java.
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [API](http://www.tvmaze.com/) - Api usado para extraer la información de las series.
-* [Jaspersoft Studio](https://community.jaspersoft.com/project/jaspersoft-studio) - Editor de formatos de informes. 
+* [Jaspersoft Studio](https://community.jaspersoft.com/project/jaspersoft-studio) - Editor de plantillas de informes. 
 
 ## Versión 
 
