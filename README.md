@@ -20,8 +20,8 @@ _Ejecutar el SerieApp.exe sigues los pasos y ya podrás usar la aplicación._
 
 * [intellij idea]( https://www.jetbrains.com/idea/?fromMenu) - El framework de java.
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [API]( http://www.tvmaze.com/) - Api usado para extraer la información de las series.
-* [Jaspersoft Studio] (https://community.jaspersoft.com/project/jaspersoft-studio) - 
+* [API](http://www.tvmaze.com/) - Api usado para extraer la información de las series.
+* [Jaspersoft Studio](https://community.jaspersoft.com/project/jaspersoft-studio) - Editor de formatos de informes. 
 
 ## Versión 
 
@@ -29,5 +29,8 @@ _Esta en la versión 1.0 de este buscador de series._
 
 ## Autor
  
-* **Angel Guillorme** - *Proyecto final DAD* - 
+* **Angel Guillorme** - *Proyecto final Desarrollo de Interfaces(DAD)_ IES Domingo Perez Minik* - 
 
+## Visualización de la Demo
+
+* [DEMO](https://community.jaspersoft.com/project/jaspersoft-studio) - Visualización de DEMO de uso. 
