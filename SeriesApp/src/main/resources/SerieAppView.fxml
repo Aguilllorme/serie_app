@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="900.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.main.java.dad.SerieAppViewController">
+   <top>
+      <MenuBar fx:id="menuTab" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="FILE">
+            <items>
+              <MenuItem fx:id="txtClose" mnemonicParsing="false" onAction="#onActionTxtClose" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="REPORTS">
+              <items>
+                <MenuItem fx:id="txtReport" mnemonicParsing="false" onAction="#onActionTxtReport" text="New report" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="THEMES">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onActionTxtCassic" text="Classic's colors" />
+              <MenuItem fx:id="txtNetflix" mnemonicParsing="false" onAction="#onActionTxtNetflix" text="Netflix's colors" />
+                  <MenuItem fx:id="txtPrimeColor" mnemonicParsing="false" onAction="#onActionTxtPrimeColor" text="PrimeVideo's colores" />
+
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="HELP">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onActionAbout" text="About" />
+              </items>
+            </Menu>
+        </menus>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+         </padding>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox fx:id="busquedaVBox" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtFindSerie" promptText="The title of the serie">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></TextField>
+            <ListView fx:id="listFindSerie" maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <right>
+      <VBox fx:id="leftPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="350.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <HBox fx:id="leftHbox" alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button fx:id="idActor" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickActor" text="C A S T S" visible="false" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding></Button>
+                  <Button fx:id="idEpis" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickEpisodios" text="E P I S O D E S" visible="false" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding></Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <StackPane fx:id="stackPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+               <children>
+                  <ProgressIndicator fx:id="progresIndicator" nodeOrientation="LEFT_TO_RIGHT" visible="false">
+                     <StackPane.margin>
+                        <Insets left="100.0" right="100.0" top="100.0" />
+                     </StackPane.margin>
+                  </ProgressIndicator>
+                  <TabPane fx:id="seasonTab" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" side="RIGHT" tabClosingPolicy="UNAVAILABLE">
+                     <StackPane.margin>
+                        <Insets left="5.0" right="-6.0" />
+                     </StackPane.margin></TabPane>
+                  <Accordion fx:id="acordionActor" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" visible="false">
+                    <panes>
+                      <TitledPane animated="false" nodeOrientation="LEFT_TO_RIGHT" text="untitled 1" />
+                      <TitledPane animated="false" text="untitled 2" />
+                    </panes>
+                     <StackPane.margin>
+                        <Insets left="5.0" />
+                     </StackPane.margin>
+                  </Accordion>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </StackPane>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="5.0" />
+         </padding>
+      </VBox>
+   </right>
+   <center>
+      <VBox fx:id="center" maxWidth="1.7976931348623157E308" minWidth="500.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="centerHor" alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ImageView fx:id="imgSerie" fitHeight="400.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@1_m3.jpg" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <VBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="200.0" minWidth="150.0" prefWidth="150.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="txtRating" alignment="CENTER" contentDisplay="BOTTOM" graphicTextGap="5.0" maxWidth="1.7976931348623157E308" text="7.8" textAlignment="CENTER">
+                           <font>
+                              <Font size="62.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="PUNTUACION" textAlignment="CENTER">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="-20.0" />
+                           </padding></Label>
+                        <Separator prefWidth="200.0" />
+                        <Label fx:id="txtYear" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Año" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Label>
+                        <Label fx:id="txtDuration" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Duration" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets right="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtStatus" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Estatus" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <Separator prefWidth="200.0" />
+                        <Label fx:id="txtGenres" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Generos" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <Separator prefWidth="200.0" />
+                        <Label fx:id="txtProducer" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Productora" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <Label fx:id="txtContry" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Pais" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="txtName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Juego de Tronos">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Separator fx:id="separator1" prefWidth="200.0" visible="false" />
+                  <Label fx:id="txtDescription" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Descripcion" wrapText="true" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator fx:id="separator2" prefWidth="200.0" visible="false" />
+                  <Label fx:id="txtLink" text="Link">
+                     <VBox.margin>
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
